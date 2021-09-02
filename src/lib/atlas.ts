@@ -61,6 +61,8 @@ export async function createUser(
   if (r.errorCode && r.errorCode === "USER_ALREADY_EXISTS") {
     throw new UserAlreadyExistsError();
   }
+
+  return { name };
 }
 
 export async function getConnectionString(projectId: string) {
