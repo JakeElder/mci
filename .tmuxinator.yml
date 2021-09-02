@@ -1,0 +1,6 @@
+name: "MCI"
+tmux_options: -L mci
+
+windows:
+  - Vim: vim
+  - Terminal:
