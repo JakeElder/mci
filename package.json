@@ -12,6 +12,7 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "digest-fetch": "^1.2.1",
+    "node-fetch": "^2",
     "octokit": "^1.5.0",
     "pretty-error": "^3.0.4",
     "prettyjson": "^1.2.1",
