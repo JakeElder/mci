@@ -8,7 +8,7 @@ export default class GetProject extends Command {
 
   static args = [
     {
-      name: "projectId",
+      name: "id",
       required: true,
       description: "The project Id",
     },
@@ -16,14 +16,14 @@ export default class GetProject extends Command {
 
   async run() {
     const { args } = this.parse(GetProject);
-    const { projectId } = args;
+    const { id } = args;
 
     if (typeof process.env.VERCEL_TOKEN !== "string") {
       this.error(`VERCEL_TOKEN needs to be set`);
     }
 
     try {
-      this.log(prettyjson.render(await getProject(projectId)));
+      this.log(prettyjson.render(await getProject(id)));
     } catch (e) {
       this.error(new PrettyError().render(e));
     }
